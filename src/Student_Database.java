@@ -49,7 +49,7 @@ public class Student_Database {
 	public static void main(String[] args) {
 		String[] student = { "Susan", "Sam", "Cam", "Yaksh", "Sharv", "Jill", "Alex", "Anish", "Aamil", "Rick" };
 		String[] hometown = { "Detroit, MI", "Seattle, WA", "San Jose, CA", "Bakersfield, CA", "Canton, MI",
-				"Atlanta, GA", "Hell, MI", "Novi, MI", "Harrisburg, PA", " St Louis, MS" };
+				"Atlanta, GA", "Hell, MI", "Novi, MI", "Harrisburg, PA", " St Louis, MO" };
 		String[] favFood = { "Hot Dog", "Burger", "Shawarma", "Binget", "Churro", "Donuts", "Candy", "Hasbrown",
 				"Fruits", "Veggies" };
 		boolean awdy = false;
@@ -61,7 +61,7 @@ public class Student_Database {
 			homeOrFood = validInformation(student, studentID);
 			if (homeOrFood.equalsIgnoreCase("hometown")) {
 				System.out.println(student[studentID] + " is from " + hometown[studentID]
-						+ ".  Would you like to know more? (enter “yes” or “no):");
+						+ ".  Would you like to know more? (enter \"yes\" or \"no\"):");
 				if (keepGoing().equalsIgnoreCase("no")) {
 					awdy = true;
 				} else {
@@ -69,9 +69,9 @@ public class Student_Database {
 				}
 			} else if (homeOrFood.equalsIgnoreCase("favorite food")) {
 				System.out.println(student[studentID] + " likes a good " + favFood[studentID]
-						+ ".  Would you like to know more? (enter “yes” or “no):");
+						+ ".  Would you like to know more? (enter \"yes\" or \"no\"):");
 				if (keepGoing().equalsIgnoreCase("no")) {
-			
+					awdy = true;
 				} else {
 					
 				}
